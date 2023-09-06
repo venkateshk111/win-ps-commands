@@ -26,4 +26,7 @@ C:\Another\Path\LargeFile2.exe 2.34
 
 ```
 
-
+## Command to list top 10 process consuming high CPU
+```
+Get-Process | Sort-Object -Property CPU -Descending | Select-Object -First 10
+```
