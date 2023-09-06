@@ -16,7 +16,7 @@ Get-ChildItem -Path "C:\" -File -Recurse -ErrorAction SilentlyContinue | Where-O
 
 ```
 
-## Sample Output
+### Sample Output
 
 ```
 FullName SizeGB
@@ -29,4 +29,22 @@ C:\Another\Path\LargeFile2.exe 2.34
 ## Command to list top 10 process consuming high CPU
 ```
 Get-Process | Sort-Object -Property CPU -Descending | Select-Object -First 10
+```
+
+### Sample Output
+
+```
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)   Id  SI ProcessName
+-------  ------    -----      -----     -------   --  -- -----------
+  13394     276   176996     209328    8540.78 1232   0 chrome
+   3627     123    65544      66752    1323.70 2672   0 explorer
+   4227      92    40980      60684     640.69 4832   0 slack
+   3514      84    39540      61824     418.83 6824   0 powershell
+   5851     105    34956      58300     415.78 7344   0 Code
+   2961      77    23364      42784     327.50 2620   0 Microsoft.Teams
+   1662      72    22260      28116     245.25 6044   0 OneDrive
+   4441     105    49840      59240     231.84 4504   0 Discord
+   1644      70    23668      30776     216.06 6964   0 Spotify
+   3705      98    20492      29820     197.75 5292   0 WindowsTerminal
+
 ```
